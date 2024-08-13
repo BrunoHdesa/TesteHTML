@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <div class="greetings">
+        <span>H</span>
+        <span>o</span>
+        <span>l</span>
+        <span>a</span>
+        <span>!</span>
+    </div>
+    <div class="description">
+        <span>Ya no estés triste 💖😊</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="color: #fff;">¡Presiona para ya no estar triste!</a>
+        </button>
+    </div>
+
+    <!-- Créditos -->
+    <div class="credits">
+        <p>&copy; 2023 Aprende Con JS.</p>
+    </div>
+</body>
+
+
+<body>
+    <div id="conteudo">
+        <h2 style="color: white;">Quieres ser mi novia?</h2>
+        <div><img src="https://i.pinimg.com/originals/bf/0e/e5/bf0ee582479db6088dcf805976b625e4.jpg" width="150" height="150 alt=""></div>
+        <div style="margin: auto;width: 170px;">
+            <button style="position: fixed;display: block;" class="btn"><a href="flower.html" style="text-decoration: none; color: #fff; padding: 10px;">Si</a></button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">No</button>
+        </div>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background: rgb(59,0,84);
+        background: linear-gradient(90deg, rgba(59,0,84,1) 0%, rgba(192,31,255,1) 47%, rgba(88,0,99,1) 100%);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function desvia(btn) {
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
